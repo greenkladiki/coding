@@ -1,0 +1,10 @@
+print('Введите число "N":')
+N = int(input())
+ 
+for number in range(N):
+    print('Введите слово "x":')
+    x = input()
+
+    if x == 'программирование' :
+        break
+print('End.')
