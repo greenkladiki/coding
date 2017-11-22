@@ -1,0 +1,14 @@
+with open ('/Users/new.aloha/Desktop/учеба/программирование/22.11/text.txt', encoding='utf-8') as f:
+    text = f.read()
+text = text.split(" ")
+x = 0
+y = 0
+for word in text:
+    a = len(word)-1
+    if word[a] == ".":
+        x += 1
+    if word[a] == ",":
+        x += 1
+    else:
+        y += 1
+print("Процент слов, заканчивающихся точкой или запятой:", x/(x+y)*100)
