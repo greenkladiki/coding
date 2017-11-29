@@ -1,0 +1,10 @@
+x = ()
+while x != '':
+    x = input ('Введите латинское слово: ')
+    with open("latinverbs.txt", "a", encoding="utf-8") as f:
+        if x.endswith('re') or x.endswith('ri'):
+            f.write (x)
+            f.write ('\n')
+    if not f.writable:
+        print('Файл закрыт')
+f.close()
