@@ -1,3 +1,10 @@
 bello
 brutto
 bravo
+rosso
+grigio
+giallo
+legno
+vetro
+grande
+caro
