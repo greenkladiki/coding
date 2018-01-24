@@ -3,3 +3,7 @@ padre
 vino
 treno
 mare
+gatto
+cane
+cazzo
+mondo
