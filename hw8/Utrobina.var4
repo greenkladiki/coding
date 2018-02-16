@@ -13,12 +13,12 @@ def get_hints(file_name):
     return hint_split
 
 def check_word(dict):
-    word = input("попробуйте угадать слово ")
+    word = input("угадайте слово ")
     while word not in dict.keys():
         word = input("попробуйте угадать слово еще раз ")
-    print("вы угадали ")
+    print("Вы угадали! Ура!")
 
-file_name = input("Input file name: ")
+file_name = input("Введите имя файла: ")
 hint = get_hints(file_name)
 print(hint [1], end = " ")
 print_dots(hint)
