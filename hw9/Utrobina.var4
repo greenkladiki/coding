@@ -1,0 +1,29 @@
+import re
+ 
+name = input('Введите название файла с текстом с расширением: ')
+ 
+with open(name, "r", encoding="utf-8") as file1:
+    text = file1.read()
+ 
+res1 = re.findall("вып[е]...[ \n.,?!]", text)
+res2 = re.findall("вып[ьи]..[ \n]", text)
+res3 = re.findall("вып[еьи].[ \n]",text)
+ 
+res = input('Введите название результирующего файла с расширением: ')
+ 
+with open(res, "w", encoding="utf-8") as file2:
+    for word in res1:
+        if str(word.endswith('\n')):
+            file2.write(str(word[:-1]) + " ")
+        else:
+            file2.write(str(word) + " ")
+    for word in res2:
+        if str(word.endswith('\n')):
+            file2.write(str(word[:-1]) + " ")
+        else:
+            file2.write(str(word) + " ")
+    for word in res3:
+        if str(word.endswith('\n')):
+            file2.write(str(word[:-1]) + " ")
+        else:
+            file2.write(str(word) + " ")
